@@ -20,25 +20,14 @@ const meta = {
 ---
 
 <Layout {meta}>
-
-  <Hero
-    image={{ src: import('~/assets/images/tobi portait.jpg'), alt: 'Tobias Mikula' }}
-  >
-    <Fragment slot="title">
-      Tobias Mikula
-    </Fragment>
+  <Hero image={{ src: import('~/assets/images/tobi portait.jpg'), alt: 'Tobias Mikula' }}>
+    <Fragment slot="title">Tobias Mikula</Fragment>
 
     <Fragment slot="subtitle">
-        <span class="font-semibold"></span> 
-       Entrepreneur & full-stack-programmer
+      <span class="font-semibold"></span>
+      Entrepreneur & full-stack-programmer
     </Fragment>
   </Hero>
 
-
-  <LatestPosts
-    title="Latest Posts"
-    postIds={[
-    ]}
-  />
-
+  <LatestPosts title="Latest Posts" postIds={[]} />
 </Layout>

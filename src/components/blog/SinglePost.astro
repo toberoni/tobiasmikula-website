@@ -44,9 +44,7 @@ const { post, url } = Astro.props;
       >
         {post.title}
       </h1>
-      <p
-        class="max-w-3xl mx-auto mt-4 mb-8 px-3 sm:px-6 text-xl text-muted dark:text-slate-400 text-justify"
-      >
+      <p class="max-w-3xl mx-auto mt-4 mb-8 px-3 sm:px-6 text-xl text-muted dark:text-slate-400 text-justify">
         {post.excerpt}
       </p>
 
@@ -92,43 +90,43 @@ const { post, url } = Astro.props;
       <SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
     </div>
   </article>
-      <script>
-      let copyButtonLabel = "Copy Code";
-      let codeBlocks = Array.from(document.querySelectorAll("pre"));
-    
-      for (let codeBlock of codeBlocks) {
-        let wrapper = document.createElement("div");
-        wrapper.style.position = "relative";
-    
-        let copyButton = document.createElement("button");
-        copyButton.className = "copy-code";
-        copyButton.innerHTML = copyButtonLabel;
-    
-        codeBlock.setAttribute("tabindex", "0");
-        codeBlock.appendChild(copyButton);
-        // wrap codebock with relative parent element
-        if(codeBlock.parentNode) {
-          codeBlock.parentNode.insertBefore(wrapper, codeBlock);
-          wrapper.appendChild(codeBlock);
-        }
-          
-        copyButton.addEventListener("click", async () => {
-          await copyCode(codeBlock, copyButton);
-        });
+  <script>
+    let copyButtonLabel = 'Copy Code';
+    let codeBlocks = Array.from(document.querySelectorAll('pre'));
+
+    for (let codeBlock of codeBlocks) {
+      let wrapper = document.createElement('div');
+      wrapper.style.position = 'relative';
+
+      let copyButton = document.createElement('button');
+      copyButton.className = 'copy-code';
+      copyButton.innerHTML = copyButtonLabel;
+
+      codeBlock.setAttribute('tabindex', '0');
+      codeBlock.appendChild(copyButton);
+      // wrap codebock with relative parent element
+      if (codeBlock.parentNode) {
+        codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+        wrapper.appendChild(codeBlock);
       }
-    
-      async function copyCode(block, button) {
-        let code = block.querySelector("code");
-        let text = code.innerText;
 
-        await navigator.clipboard.writeText(text);
+      copyButton.addEventListener('click', async () => {
+        await copyCode(codeBlock, copyButton);
+      });
+    }
 
-        // visual feedback that task is completed
-        button.innerText = "Code Copied";
+    async function copyCode(block, button) {
+      let code = block.querySelector('code');
+      let text = code.innerText;
 
-        setTimeout(() => {
-          button.innerText = copyButtonLabel;
-        }, 700);
-      }
-    </script>
+      await navigator.clipboard.writeText(text);
+
+      // visual feedback that task is completed
+      button.innerText = 'Code Copied';
+
+      setTimeout(() => {
+        button.innerText = copyButtonLabel;
+      }, 700);
+    }
+  </script>
 </section>

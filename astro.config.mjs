@@ -10,7 +10,7 @@ import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
-import remarkToc from 'remark-toc'
+import remarkToc from 'remark-toc';
 
 import { SITE } from './src/config.mjs';
 

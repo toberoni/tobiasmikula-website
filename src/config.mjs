@@ -8,8 +8,7 @@ const CONFIG = {
   trailingSlash: true,
 
   title: 'Tobias Mikula',
-  description:
-    'Personal Blog',
+  description: 'Personal Blog',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

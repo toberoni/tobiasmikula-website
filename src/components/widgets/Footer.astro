@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon';
 import { SITE } from '~/config.mjs';
 import { getHomePermalink } from '~/utils/permalinks';
+import Plausible from '~/components/common/Plausible.astro';
 
 interface Link {
   text?: string;
@@ -48,4 +49,5 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       </div>
     </div>
   </div>
+  <Plausible></Plausible>
 </footer>
