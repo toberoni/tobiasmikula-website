@@ -1,0 +1,44 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import LatestPosts from '~/components/blog/LatestPosts.astro';
+import Hero from '~/components/widgets/Hero.astro';
+// import Note from '~/components/widgets/Note.astro';
+//import Features from '~/components/widgets/Features.astro';
+//import Features2 from '~/components/widgets/Features2.astro';
+//import Steps from '~/components/widgets/Steps.astro';
+// import Content from '~/components/widgets/Content.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+
+  <Hero
+    image={{ src: import('~/assets/images/tobi portait.jpg'), alt: 'Tobias Mikula' }}
+  >
+    <Fragment slot="title">
+      Tobias Mikula
+    </Fragment>
+
+    <Fragment slot="subtitle">
+        <span class="font-semibold"></span> 
+       Entrepreneur & full-stack-programmer
+    </Fragment>
+  </Hero>
+
+
+  <LatestPosts
+    title="Latest Posts"
+    postIds={[
+    ]}
+  />
+
+</Layout>
