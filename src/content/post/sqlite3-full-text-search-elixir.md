@@ -1,7 +1,7 @@
 ---
 publishDate: 2023-05-26T00:12:00Z
-title: How to add SQLite3 Full Text Search to Ecto tables
-excerpt: In this blog post we are going to add full text search to an existing table in our Phoenix app.
+title: How to add SQLite3 Full Text Search to existing Ecto tables
+description: In this blog post we are going to add full text search to an existing table in our Phoenix app.
 image: ~/assets/images/2023/elixir sqlite full text search.png
 tags:
   - tutorial
@@ -244,7 +244,7 @@ Ecto.Adapters.SQL.query!(Chatter.Repo, query, [])
 
 ## Ecto schema for our FTS5 table
 
-Let's add a schema in `.lib/chatter/search/messages_search.ex` to use our "messages_searches" table with Ecto:
+Let's add a schema in `.lib/chatter/search/messages_search.ex` to use our _messages_search_ table with Ecto:
 
 ```elixir
 defmodule Chatter.Search.MessagesSearch do
